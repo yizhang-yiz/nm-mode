@@ -1,4 +1,17 @@
-;; nm-mode is a minimalist majfor mode for NONMEM
+;;; nm-model.el --- Support for the NONMEM PKPD modeling language  -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2010-2025 Yi Zhang
+
+;; Author: Yi Zhang <yi.zhang6@iconplc.com>
+;; Maintainer: Yi Zhang <yi.zhang6@iconplc.com>
+;; Created: 18 Sep 2025
+
+;;; Keywords: languages
+;;; URL: https://github.com/yizhang-yiz/nm-mode
+
+;;; Code:
+
+(kill-all-local-variables)
 
 (defface nm-mode-ctl-record-face
   '((t (:foreground "dark red" :weight bold)))
@@ -569,5 +582,7 @@
 
 (font-lock-add-keywords 'nm-mode nm-mode-font-lock-keywords)
 
-(add-to-list 'auto-mode-alist '("\\.ctl\\'" . nm-mode))
-(add-to-list 'auto-mode-alist '("\\.mod\\'" . nm-mode))
+(provide 'nm-mode)
+
+;;; <nm-mode.el> ends here
+;;; nm-mode --- A minimalist major mode for NONMEM  -*- lexical-binding: t; -*-
